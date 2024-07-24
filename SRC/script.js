@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchMonsters();
 
   // ADD eventListener for the submit
-  M_form.addEventListener("submit", createMonter);
+  M_form.addEventListener("submit", createMonster);
 
   function fetchMonsters(page = 1, limit = 50) {
     fetch(`http://localhost:3000/monsters?_limit=${limit}&_page=${page}`)
