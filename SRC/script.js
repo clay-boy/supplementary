@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((res) => res.json())
       .then((monsters) => {
         monsterList.innerHTML = "";
-        monsters.forEach((monster) => displayMonster(moster));
+        monsters.forEach((monster) => displayMonster(monster));
       });
   }
 
@@ -24,13 +24,48 @@ document.addEventListener("DOMContentLoaded", () => {
     div.innerHTML = `
     <h2>${monster.name}</h2>
     <p>${monster.age}</p>
-    <p>${monster.description}  
-  `;
+    <p>${monster.description}</p>
+      `;
     monsterList.appendChild(div);
   }
 
   // create a new monster
   function createMonster(event) {
-    event.prev;
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const description = document.getElementById("description").value;
+
+    // create a new monster object
+    const newMonster = {
+      name,
+      age: parseFloat(age),
+      description,
+    };
+
+    // request to add new monster
+
+    fetch("http://localhost:3000/monsters", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(newMonster),
+    })
+      .then((res) => res.json())
+      .then((monster) => {
+        // display newMonsters
+        displayMonster(monster);
+
+        // clear the form
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("description").value = "";
+      });
   }
+  function submit() {
+    const submit = document.getElementById("submit");
+    submit.addEventListener("click", newMonster);
+  }
+  createMonster();
 });
