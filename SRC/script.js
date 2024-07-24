@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     div.innerHTML = `
     <h2>${monster.name}</h2>
     <p>${monster.age}</p>
-    <p>${monster.description}
+    <p>${monster.description}</p>
       `;
     monsterList.appendChild(div);
   }
