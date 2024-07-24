@@ -1,9 +1,36 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const monsterList = document.getElementById("list");
+  const monsterForm = document.getElementById("M_form");
 
+  // fetch and display the 50
+  fetchMonsters();
 
-// document.addEventListener('DOMContentLoaded', () => {
-// const monsterList = document.getElementById('list');
-// const monsterForm = document.getElementById('M_form');
-// })
+  // ADD eventListener for the submit
+  M_form.addEventListener("submit", createMonter);
 
-// // fetch and display the 50
-// fetch
+  function fetchMonsters(page = 1, limit = 50) {
+    fetch(`http://localhost:3000/monsters?_limit=${limit}&_page=${page}`)
+      .then((res) => res.json())
+      .then((monsters) => {
+        monsterList.innerHTML = "";
+        monsters.forEach((monster) => displayMonster(moster));
+      });
+  }
+
+  // display a monster on the page
+  function displayMonster(monster) {
+    const div = document.createElement("div");
+    div.classList.add("monster");
+    div.innerHTML = `
+    <h2>${monster.name}</h2>
+    <p>${monster.age}</p>
+    <p>${monster.description}  
+  `;
+    monsterList.appendChild(div);
+  }
+
+  // create a new monster
+  function createMonster(event) {
+    event.prev;
+  }
+});
