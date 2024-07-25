@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     div.classList.add("monster");
     div.innerHTML = `
     <h2>${monster.name}</h2>
-    <p>${monster.age}</p>
-    <p>${monster.description}</p>
+    <p class ='age'>${monster.age}</p>
+    <p class ='description'>${monster.description}</p>
       `;
     monsterList.appendChild(div);
   }

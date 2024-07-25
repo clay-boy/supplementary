@@ -1,7 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 body {
-  font-family: "Sevillana", cursive;
-  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
   font-style: normal;
-  background-color: #f0f0f0;
+  background-color: black;
+}
+
+.styles {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+h1 {
+  font-size: 4em;
+  text-align: center;
+  background-color: green;
+}
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: brown;
+}
+.description {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+.age {
+  text-align: center;
 }

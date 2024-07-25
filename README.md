@@ -68,4 +68,8 @@ Open `index.html` in a web browser to view the Monster Tracker application.
 
 ## ADMIN INFO
 
-**Email** -
+**Email** - [click-here](mailto:keith.mwai@gmail.com)
+
+**Github** - [click-here](https://github.com/clay-boy)
+
+**_enjoy using our page_**
