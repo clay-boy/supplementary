@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const monsterList = document.getElementById("list");
   const monsterForm = document.getElementById("M_form");
 
-  const db_API = "https://suplementary-vercel.vercel.app/monsters";
   // fetch and display the 50
   fetchMonsters();
 
@@ -10,7 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   monsterForm.addEventListener("submit", createMonster);
 
   function fetchMonsters(page = 1, limit = 50) {
-    fetch(`http://localhost:3000/monsters?_limit=${limit}&_page=${page}`)
+    fetch(
+      `https://suplementary-vercel.vercel.app/monsters?_limit=${limit}&_page=${page}`
+    )
       .then((res) => res.json())
       .then((monsters) => {
         monsterList.innerHTML = "";
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // request to add new monster
 
-    fetch("http://localhost:3000/monsters", {
+    fetch("https://suplementary-vercel.vercel.app/monsters", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
