@@ -6023,6 +6023,12 @@
       "name": "Monkey",
       "age": 21,
       "description": "cool guy"
+    },
+    {
+      "id": "570b",
+      "name": "GIRAFFE",
+      "age": 20,
+      "description": "tall"
     }
   ]
 }

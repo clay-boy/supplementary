@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   monsterForm.addEventListener("submit", createMonster);
 
   function fetchMonsters(page = 1, limit = 50) {
-    fetch(`${db_API}_limit=${limit}&_page=${page}`)
+    fetch(`http://localhost:3000/monsters?_limit=${limit}&_page=${page}`)
       .then((res) => res.json())
       .then((monsters) => {
         monsterList.innerHTML = "";
