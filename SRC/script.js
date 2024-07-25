@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchMonsters();
 
   // ADD eventListener for the submit
-  M_form.addEventListener("submit", createMonster);
+  monsterForm.addEventListener("submit", createMonster);
 
   function fetchMonsters(page = 1, limit = 50) {
     fetch(`http://localhost:3000/monsters?_limit=${limit}&_page=${page}`)
@@ -61,11 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("name").value = "";
         document.getElementById("age").value = "";
         document.getElementById("description").value = "";
-      });
+      })
+      .catch(console.error);
   }
-  function submit() {
-    const submit = document.getElementById("submit");
-    submit.addEventListener("click", newMonster);
-  }
-  createMonster();
 });
