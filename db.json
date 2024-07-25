@@ -6007,22 +6007,28 @@
       "description": "131313"
     },
     {
-      "id": "b88d",
+      "id": "6bd6",
+      "name": "GIRAFFE",
+      "age": 127,
+      "description": "Tall and handsome"
+    },
+    {
+      "id": "4289",
+      "name": "GIRAFFE",
+      "age": 82,
+      "description": "Tall"
+    },
+    {
+      "id": "4d95",
       "name": "Elephant",
-      "age": 200,
-      "description": "A huge animal with a back"
+      "age": 27,
+      "description": "big"
     },
     {
-      "id": "4b4e",
+      "id": "7b9e",
       "name": "Monkey",
-      "age": 54,
-      "description": "A animal with feats shapped like human hands"
-    },
-    {
-      "id": "2b59",
-      "name": "Monkey",
-      "age": 81,
-      "description": "hello"
+      "age": 21,
+      "description": "cool guy"
     }
   ]
 }

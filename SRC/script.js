@@ -14,11 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((monsters) => {
         monsterList.innerHTML = "";
         monsters.forEach((monster) => displayMonster(monster));
-      });
+      })
+      .catch(console.error);
   }
 
   // display a monster on the page
-  function displayMonster(monster) {
+  function displayMonster(monster, prepend = false) {
     const div = document.createElement("div");
     div.classList.add("monster");
     div.innerHTML = `
@@ -26,11 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>${monster.age}</p>
     <p>${monster.description}</p>
       `;
+    if (prepend) {
+      monsterList.insertAdjacentElement("afterbegin", div);
+    } else {
+      monsterList.appendChild(div);
+    }
     monsterList.appendChild(div);
   }
 
   // create a new monster
   function createMonster(event) {
+    event.preventDefault();
     const name = document.getElementById("name").value;
     const age = document.getElementById("age").value;
     const description = document.getElementById("description").value;
@@ -55,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((res) => res.json())
       .then((monster) => {
         // display newMonsters
-        displayMonster(monster);
+        displayMonster(monster, true);
 
         // clear the form
         document.getElementById("name").value = "";
