@@ -73,3 +73,4 @@ Open `index.html` in a web browser to view the Monster Tracker application.
 **Github** - [click-here](https://github.com/clay-boy/supplementary)
 
 **_enjoy using our page_**
+click here to view the website
