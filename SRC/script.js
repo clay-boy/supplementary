@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // display a monster on the page
-  function displayMonster(monster, prepend = false) {
+  function displayMonster(monster) {
     const div = document.createElement("div");
     div.classList.add("monster");
     div.innerHTML = `
@@ -27,11 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>${monster.age}</p>
     <p>${monster.description}</p>
       `;
-    if (prepend) {
-      monsterList.insertAdjacentElement("afterbegin", div);
-    } else {
-      monsterList.appendChild(div);
-    }
     monsterList.appendChild(div);
   }
 
@@ -62,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((res) => res.json())
       .then((monster) => {
         // display newMonsters
-        displayMonster(monster, true);
+        displayMonster(monster);
 
         // clear the form
         document.getElementById("name").value = "";
