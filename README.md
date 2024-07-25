@@ -70,6 +70,6 @@ Open `index.html` in a web browser to view the Monster Tracker application.
 
 **Email** - [click-here](mailto:keith.mwai@gmail.com)
 
-**Github** - [click-here](https://github.com/clay-boy)
+**Github** - [click-here](https://github.com/clay-boy/supplementary)
 
 **_enjoy using our page_**
